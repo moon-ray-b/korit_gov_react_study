@@ -1,5 +1,11 @@
 import "./App.css";
+import Emotion1 from "./Emotion/Emotion1";
 import Hook01 from "./ReactStudy/Hook01";
+import FruitsFilter from "./ReactStudy/LifeCycle/FruitsFilter";
+import LifeCycle from "./ReactStudy/LifeCycle/LifeCycle";
+import LifeCycleApp from "./ReactStudy/LifeCycle/LifeCycleApp";
+import Render from "./ReactStudy/LifeCycle/Render";
+import SignupForm from "./ReactStudy/LifeCycle/SignupForm";
 import React01 from "./ReactStudy/React01";
 import React02 from "./ReactStudy/React02";
 import React03 from "./ReactStudy/React03";
@@ -9,6 +15,10 @@ import ReactHook03 from "./ReactStudy/ReactHook03";
 import ReactHook04 from "./ReactStudy/ReactHook04";
 import ReactHook05 from "./ReactStudy/ReactHook05";
 import ReactHook06 from "./ReactStudy/ReactHook06";
+import ReactHook07 from "./ReactStudy/ReactHook07";
+import ReactHook08 from "./ReactStudy/ReactHook08";
+import ReactHook09 from "./ReactStudy/ReactHook09";
+import Index from "./TodoList/pages";
 
 function App() {
     const name = "배찬익";
@@ -31,7 +41,16 @@ function App() {
             {/* <ReactHook03 /> */}
             {/* <ReactHook04 /> */}
             {/* <ReactHook05 /> */}
-            <ReactHook06 />
+            {/* <ReactHook06 /> */}
+            {/* <ReactHook07/> */}
+            {/* <Render /> */}
+            {/* <LifeCycleApp /> */}
+            {/* <FruitsFilter /> */}
+            {/* <SignupForm /> */}
+            {/* <ReactHook08 /> */}
+            {/* <Emotion1 /> */}
+            {/* <ReactHook09/> */}
+            <Index />
         </>
     );
 }
