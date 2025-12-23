@@ -1,27 +1,48 @@
 /** @jsxImportSource @emotion/react */
-import { PiAcornBold } from "react-icons/pi";
 import * as s from "./styles";
-import React from "react";
 
-function Header() {
+function Header({ filterMode, setFilterMode, setSearchKeyword }) {
+    const searchInputOnChangeHandler = (e) => {
+        setSearchKeyword(e.target.value);
+    };
+
+    const filterModeOnChangeHandler = (e) => {
+        setFilterMode(e.target.id);
+    };
     return (
         <>
             <div css={s.container}>
                 <input
                     css={s.searchInput}
                     type="text"
-                    placeholder="검색어 입력해라"
+                    placeholder="검색어를 입력해주세요."
+                    onChange={searchInputOnChangeHandler}
                 />
-                <button css={s.searchButton}>
-                    <PiAcornBold />
-                </button>
             </div>
             <div css={s.filterContainer}>
-                <input type="radio" id="all" name="filter" />
+                <input
+                    type="radio"
+                    id="all"
+                    name="filter"
+                    checked={filterMode === "all"}
+                    onChange={filterModeOnChangeHandler}
+                />
                 <label htmlFor="all">전체</label>
-                <input type="radio" id="complete" name="filter" />
+                <input
+                    type="radio"
+                    id="complete"
+                    name="filter"
+                    checked={filterMode === "complete"}
+                    onChange={filterModeOnChangeHandler}
+                />
                 <label htmlFor="complete">완료</label>
-                <input type="radio" id="incomplete" name="filter" />
+                <input
+                    type="radio"
+                    id="incomplete"
+                    name="filter"
+                    checked={filterMode === "incomplete"}
+                    onChange={filterModeOnChangeHandler}
+                />
                 <label htmlFor="incomplete">미완료</label>
             </div>
         </>
